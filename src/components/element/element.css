@@ -1,0 +1,15 @@
+.space{
+  margin: 5px;
+}
+
+.center{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+
+.right{
+  margin-left: 10px;
+}

@@ -1,11 +1,22 @@
 
 import React from 'react';
+import Element from '../element/element.jsx';
 
 export default class Main extends React.Component {
 	render(){
 		return(
 		<div>
-			<h1>Hello l3alawi lm9awed</h1>
+			<div className="columns">
+				<div className="column is-2">
+
+				</div>
+				<div className="column is-7">
+					<Element />
+				</div>
+				<div className="column is-3">
+
+				</div>
+			</div>
 		</div>
 		)
 	}

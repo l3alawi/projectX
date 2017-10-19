@@ -1,0 +1,17 @@
+strong{
+  font-size: 16px;
+}
+
+.debut{
+  color: hsl(141, 71%, 48%);
+  margin: 3px;
+}
+
+.inOnRow{
+  text-align: center;
+}
+
+.arrivee{
+  color: hsl(348, 100%, 61%);
+  margin: 3px;
+}

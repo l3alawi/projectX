@@ -10,29 +10,23 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.js$/, 
+				test: /\.js$/,
 				loader: 'babel-loader', exclude: /node_modules/
 			},
 			{
-				test: /\.jsx$/, 
+				test: /\.jsx$/,
 				loader: 'babel-loader', exclude: /node_modules/
 			},
 			{
 				test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
-				loader: 'file-loader?name=assets/[name].[hash].[ext]' 
+				loader: 'file-loader?name=assets/[name].[hash].[ext]'
 			},
 			{
 				test: /\.css$/,
-				exclude: helpers.root('src'),
 				use: ExtractTextPlugin.extract({
 					fallback: 'style-loader',
 					use: 'css-loader?sourceMap'
 				})
-			},
-			{
-				test: /\.css$/,
-				include: helpers.root('src'),
-				loader: 'raw-loader'
 			}
 
 		]
