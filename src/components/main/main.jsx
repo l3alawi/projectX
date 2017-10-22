@@ -7,10 +7,10 @@ export default class Main extends React.Component {
 		return(
 		<div>
 			<div className="columns">
-				<div className="column is-2">
+				<div className="column is-3">
 
 				</div>
-				<div className="column is-7">
+				<div className="column is-6">
 					<Element />
 				</div>
 				<div className="column is-3">

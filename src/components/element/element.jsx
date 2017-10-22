@@ -1,44 +1,61 @@
 import React from 'react';
 import './element.css';
-import Trajet from '../trajet/trajet.jsx'
+import Trajet from '../trajet/trajet.jsx';
+import trajetData from '../../data/trajets.json';
 
-
-
-
-export default class Element extends React.Component{
-  render(){
-    return(
+export default class Element extends React.Component {
+  render() {
+    return (
       <div>
         <div className="card">
-          <div className="card-content columns">
-            <div className="column is-4">
-              <div className=" center media">
-                <div className="media-left">
-                  <p className="title is-6">Alaeddine Beljebbar</p>
-                  <figure className="image is-64x64">
-                    <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image" />
+          <div className="columns is-gapless">
+            <div className="column is-6">
+              <div className="columns is-mobile is-gapless">
+                <div className="parent column is-7">
+                  <h1 className="childCenter">{trajetData.user.name}</h1>
+                  <figure className="childCenter image is-64x64">
+                    <img className="circular" src={trajetData.user.picture}/>
                   </figure>
                 </div>
-                <div className="media-content right">
-                  <p className="has-text-left-mobile"><i className="fa fa-male space" aria-hidden="true"></i>, 24 ans</p>
-                  <div className="rightContent"><i className="fa fa-facebook-official fa-lg space" aria-hidden="true"></i> 333 amis</div>
-                  <div className="rightContent"><i className="fa fa-star-o fa-lg space" aria-hidden="true"></i>5/5</div>
+                <div className="column is-5">
+                  <h1 className="childRight">
+                    <i style={{color: 'hsl(171, 100%, 41%)'}} className="space fa fa-male" aria-hidden="true"></i>{trajetData.user.age}, ans</h1>
+                  <h1 className="childRight">
+                    <i style={{color: 'hsl(217, 71%, 53%)'}} className="space fa fa-facebook-square" aria-hidden="true"></i>{trajetData.user.facebook_friends}
+                    amis</h1>
+                  <h1 className="childRight">
+                    <i style={{color: 'hsl(48, 100%, 67%)'}} className="space fa fa-star" aria-hidden="true"></i>
+                    {trajetData.user.avis}/5 - {trajetData.user.reviews.length}
+                    avis</h1>
                 </div>
               </div>
-            </div>
-
-            <div className="column is-5">
-              <div className="content">
-                    <Trajet depart="Rabat" arret={["skhirate","bengrire"]} arrivee="Marrakech" />
-                    <p><i class="fa fa-circle-thin debut" aria-hidden="true"></i>RDV: Voir avec le conducteur</p>
-                    <p><i class="fa fa-circle-thin space arrivee" aria-hidden="true"></i>Voir avec le conducteur</p>
-                <time datetime="2016-1-1"><strong>11:09 PM - 1 Jan 2016</strong></time>
+              <hr className="line"></hr>
+              <div className="centerDiv">
+                <p className="space childLeft">
+                  <font size="8">{trajetData.trajet.prix}</font>,00DH
+                  <strong>par place</strong>
+                </p>
+                <p className="space childLeft">
+                  <font size="6">{trajetData.trajet.places_restantes}</font>
+                  place restante parmis {trajetData.trajet.places}</p>
               </div>
             </div>
 
-            <div className="column is-3">
-              <h1><strong>70 </strong>DH, par place</h1>
-              <h3><i className="fa fa-user space" aria-hidden="true"></i>3 places restantes</h3>
+            <div className=" parent column is-6">
+              <div>
+                <p className="date">{trajetData.trajet.date.jour}
+                  <strong className="date0">{trajetData.trajet.date.mois}</strong>
+                  à
+                  <font size="7">{trajetData.trajet.date.heure}</font>
+                </p>
+              </div>
+              <Trajet debut={trajetData.trajet.from.city} stop={trajetData.trajet.stopes} arrivee={trajetData.trajet.to.city}/>
+              <p>
+                <i class="fa fa-circle-thin debut" aria-hidden="true"></i>
+                RDV : {trajetData.trajet.from.place}</p>
+              <p>
+                <i class="fa fa-circle-thin space arrivee" aria-hidden="true"></i>
+                RDV : {trajetData.trajet.to.place}</p>
             </div>
           </div>
         </div>

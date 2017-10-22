@@ -9,7 +9,50 @@
   transform: translate(-50%,-50%);
 }
 
+.parent{
+  text-align:center;
+}
+
+.childCenter{
+  margin:auto;
+}
+
+.centerDiv{
+  width: 80%;
+  margin:auto;
+}
+
+.childLeft{
+  text-align: left;
+}
+
 
 .right{
   margin-left: 10px;
 }
+
+.circular {
+	width: 300px;
+	height: 300px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: url(http://link-to-your/image.jpg) no-repeat;
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	}
+
+  .line{
+    margin: 0px;
+    position: relative;
+    top: 12px;
+  }
+
+  .date{
+    font-size: 19px;
+  }
+
+  .date0{
+    font-size: 30px;
+  }
