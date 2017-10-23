@@ -1,35 +1,371 @@
 {
-  "user": {
-    "name": "Alaeddine Beljebbar",
-    "picture": "https://bulma.io/images/placeholders/64x64.png",
-    "age": "24",
-    "gender": "male",
-    "facebook_friends": "333",
-    "avis": "5",
-    "reviews": {
-      "review0":{},
-      "review1":{},
-      "length":2
+  "trajets": [
+    {
+      "user": {
+        "name": "Alaeddine Beljebbar",
+        "picture": "https://bulma.io/images/placeholders/64x64.png",
+        "age": "24",
+        "gender": "male",
+        "facebook_friends": "333",
+        "avis": "5",
+        "reviews": {
+          "review0": {},
+          "review1": {},
+          "length": 2
+        }
+      },
+      "trajet": {
+        "from": {
+          "city": "Rabat",
+          "place": ""
+        },
+        "to": {
+          "city": "Marrakech",
+          "place": ""
+        },
+        "stopes": [
+          "Bengrire",
+          "Skhirate"
+        ],
+        "date": {
+          "jour": "Vendredi",
+          "mois": "20 Octobre",
+          "heure": "19:20"
+        },
+        "prix": "70",
+        "places": "4",
+        "places_restantes": "2"
+      }
+    },
+    {
+      "user": {
+        "name": "Chaheer Beljebbar",
+        "picture": "https://bulma.io/images/placeholders/64x64.png",
+        "age": "26",
+        "gender": "male",
+        "facebook_friends": "33",
+        "avis": "5",
+        "reviews": {
+          "review0": {},
+          "review1": {},
+          "length": 2
+        }
+      },
+      "trajet": {
+        "from": {
+          "city": "Ouarzazate",
+          "place": ""
+        },
+        "to": {
+          "city": "Marrakech",
+          "place": ""
+        },
+        "stopes": [
+          "tadart"
+        ],
+        "date": {
+          "jour": "Vendredi",
+          "mois": "20 Octobre",
+          "heure": "19:20"
+        },
+        "prix": "70",
+        "places": "4",
+        "places_restantes": "2"
+      }
+    },
+    {
+      "user": {
+        "name": "chimoune Beljebbar",
+        "picture": "https://bulma.io/images/placeholders/64x64.png",
+        "age": "26",
+        "gender": "male",
+        "facebook_friends": "333",
+        "avis": "5",
+        "reviews": {
+          "review0": {},
+          "review1": {},
+          "length": 2
+        }
+      },
+      "trajet": {
+        "from": {
+          "city": "Rabat",
+          "place": ""
+        },
+        "to": {
+          "city": "Marrakech",
+          "place": ""
+        },
+        "stopes": [
+          "Bengrire",
+          "Skhirate"
+        ],
+        "date": {
+          "jour": "Vendredi",
+          "mois": "20 Octobre",
+          "heure": "19:20"
+        },
+        "prix": "70",
+        "places": "4",
+        "places_restantes": "2"
+      }
+    },
+    {
+      "user": {
+        "name": "Alaeddine Beljebbar",
+        "picture": "https://bulma.io/images/placeholders/64x64.png",
+        "age": "24",
+        "gender": "male",
+        "facebook_friends": "333",
+        "avis": "5",
+        "reviews": {
+          "review0": {},
+          "review1": {},
+          "length": 2
+        }
+      },
+      "trajet": {
+        "from": {
+          "city": "Rabat",
+          "place": ""
+        },
+        "to": {
+          "city": "Marrakech",
+          "place": ""
+        },
+        "stopes": [
+          "Bengrire",
+          "Skhirate"
+        ],
+        "date": {
+          "jour": "Vendredi",
+          "mois": "20 Octobre",
+          "heure": "19:20"
+        },
+        "prix": "70",
+        "places": "4",
+        "places_restantes": "2"
+      }
+    },
+    {
+      "user": {
+        "name": "Chaheer Beljebbar",
+        "picture": "https://bulma.io/images/placeholders/64x64.png",
+        "age": "26",
+        "gender": "male",
+        "facebook_friends": "33",
+        "avis": "5",
+        "reviews": {
+          "review0": {},
+          "review1": {},
+          "length": 2
+        }
+      },
+      "trajet": {
+        "from": {
+          "city": "Ouarzazate",
+          "place": ""
+        },
+        "to": {
+          "city": "Marrakech",
+          "place": ""
+        },
+        "stopes": [
+          "tadart"
+        ],
+        "date": {
+          "jour": "Vendredi",
+          "mois": "20 Octobre",
+          "heure": "19:20"
+        },
+        "prix": "70",
+        "places": "4",
+        "places_restantes": "2"
+      }
+    },
+    {
+      "user": {
+        "name": "chimoune Beljebbar",
+        "picture": "https://bulma.io/images/placeholders/64x64.png",
+        "age": "26",
+        "gender": "male",
+        "facebook_friends": "333",
+        "avis": "5",
+        "reviews": {
+          "review0": {},
+          "review1": {},
+          "length": 2
+        }
+      },
+      "trajet": {
+        "from": {
+          "city": "Rabat",
+          "place": ""
+        },
+        "to": {
+          "city": "Marrakech",
+          "place": ""
+        },
+        "stopes": [
+          "Bengrire",
+          "Skhirate"
+        ],
+        "date": {
+          "jour": "Vendredi",
+          "mois": "20 Octobre",
+          "heure": "19:20"
+        },
+        "prix": "70",
+        "places": "4",
+        "places_restantes": "2"
+      }
+    },
+    {
+      "user": {
+        "name": "Alaeddine Beljebbar",
+        "picture": "https://bulma.io/images/placeholders/64x64.png",
+        "age": "24",
+        "gender": "male",
+        "facebook_friends": "333",
+        "avis": "5",
+        "reviews": {
+          "review0": {},
+          "review1": {},
+          "length": 2
+        }
+      },
+      "trajet": {
+        "from": {
+          "city": "Rabat",
+          "place": ""
+        },
+        "to": {
+          "city": "Marrakech",
+          "place": ""
+        },
+        "stopes": [
+          "Bengrire",
+          "Skhirate"
+        ],
+        "date": {
+          "jour": "Vendredi",
+          "mois": "20 Octobre",
+          "heure": "19:20"
+        },
+        "prix": "70",
+        "places": "4",
+        "places_restantes": "2"
+      }
+    },
+    {
+      "user": {
+        "name": "Chaheer Beljebbar",
+        "picture": "https://bulma.io/images/placeholders/64x64.png",
+        "age": "26",
+        "gender": "male",
+        "facebook_friends": "33",
+        "avis": "5",
+        "reviews": {
+          "review0": {},
+          "review1": {},
+          "length": 2
+        }
+      },
+      "trajet": {
+        "from": {
+          "city": "Ouarzazate",
+          "place": ""
+        },
+        "to": {
+          "city": "Marrakech",
+          "place": ""
+        },
+        "stopes": [
+          "tadart"
+        ],
+        "date": {
+          "jour": "Vendredi",
+          "mois": "20 Octobre",
+          "heure": "19:20"
+        },
+        "prix": "70",
+        "places": "4",
+        "places_restantes": "2"
+      }
+    },
+    {
+      "user": {
+        "name": "chimoune Beljebbar",
+        "picture": "https://bulma.io/images/placeholders/64x64.png",
+        "age": "26",
+        "gender": "male",
+        "facebook_friends": "333",
+        "avis": "5",
+        "reviews": {
+          "review0": {},
+          "review1": {},
+          "length": 2
+        }
+      },
+      "trajet": {
+        "from": {
+          "city": "Rabat",
+          "place": ""
+        },
+        "to": {
+          "city": "Marrakech",
+          "place": ""
+        },
+        "stopes": [
+          "Bengrire",
+          "Skhirate"
+        ],
+        "date": {
+          "jour": "Vendredi",
+          "mois": "20 Octobre",
+          "heure": "19:20"
+        },
+        "prix": "70",
+        "places": "4",
+        "places_restantes": "2"
+      }
+    },
+    {
+      "user": {
+        "name": "Alaeddine Beljebbar",
+        "picture": "https://bulma.io/images/placeholders/64x64.png",
+        "age": "24",
+        "gender": "male",
+        "facebook_friends": "333",
+        "avis": "5",
+        "reviews": {
+          "review0": {},
+          "review1": {},
+          "length": 2
+        }
+      },
+      "trajet": {
+        "from": {
+          "city": "Rabat",
+          "place": ""
+        },
+        "to": {
+          "city": "Marrakech",
+          "place": ""
+        },
+        "stopes": [
+          "Bengrire",
+          "Skhirate"
+        ],
+        "date": {
+          "jour": "Vendredi",
+          "mois": "20 Octobre",
+          "heure": "19:20"
+        },
+        "prix": "70",
+        "places": "4",
+        "places_restantes": "2"
+      }
     }
-  },
-
-  "trajet":{
-    "from": {
-      "city":"Rabat",
-      "place":""
-    },
-    "to": {
-      "city": "Marrakech",
-      "place":""
-    },
-    "stopes":["Bengrire","Skhirate"],
-    "date":{
-      "jour": "Vendredi",
-      "mois": "20 Octobre",
-      "heure": "19:20"
-    },
-    "prix":"70",
-    "places":"4",
-    "places_restantes":"2"
-  }
+  ]
 }
