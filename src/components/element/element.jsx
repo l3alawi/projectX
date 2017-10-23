@@ -15,7 +15,25 @@ export default class Element extends React.Component {
       <div className="element">
         <div className="card">
           <div className="columns is-gapless">
-            <div className="column is-6-tablet">
+
+            <div className=" parent column is-6">
+              <div>
+                <p className="date">{this.props.trajets.trajet.date.jour}
+                  <strong className="date0">{this.props.trajets.trajet.date.mois}</strong>
+                  à
+                  <font size="7">{this.props.trajets.trajet.date.heure}</font>
+                </p>
+              </div>
+              <Trajet debut={this.props.trajets.trajet.from.city} stop={this.props.trajets.trajet.stopes} arrivee={this.props.trajets.trajet.to.city}/>
+              <p>
+                <i className="fa fa-circle-thin debut" aria-hidden="true"></i>
+                RDV : {this.props.trajets.trajet.from.place}</p>
+              <p>
+                <i className="fa fa-circle-thin space arrivee" aria-hidden="true"></i>
+                RDV : {this.props.trajets.trajet.to.place}</p>
+            </div>
+
+            <div className="column is-6">
               <div className="columns is-mobile is-gapless">
                 <div className="parent column is-7">
                   <h1 className="childCenter">{this.props.trajets.user.name}</h1>
@@ -45,23 +63,6 @@ export default class Element extends React.Component {
                   <font size="6">{this.props.trajets.trajet.places_restantes}</font>
                   place restante parmis {this.props.trajets.trajet.places}</p>
               </div>
-            </div>
-
-            <div className=" parent column is-6">
-              <div>
-                <p className="date">{this.props.trajets.trajet.date.jour}
-                  <strong className="date0">{this.props.trajets.trajet.date.mois}</strong>
-                  à
-                  <font size="7">{this.props.trajets.trajet.date.heure}</font>
-                </p>
-              </div>
-              <Trajet debut={this.props.trajets.trajet.from.city} stop={this.props.trajets.trajet.stopes} arrivee={this.props.trajets.trajet.to.city}/>
-              <p>
-                <i className="fa fa-circle-thin debut" aria-hidden="true"></i>
-                RDV : {this.props.trajets.trajet.from.place}</p>
-              <p>
-                <i className="fa fa-circle-thin space arrivee" aria-hidden="true"></i>
-                RDV : {this.props.trajets.trajet.to.place}</p>
             </div>
           </div>
         </div>

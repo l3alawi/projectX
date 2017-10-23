@@ -29,7 +29,10 @@
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {
+    "moment": "^2.19.1",
     "react": "^16.0.0",
+    "react-addons-shallow-compare": "^15.6.2",
+    "react-dates": "^14.0.0",
     "react-dom": "^16.0.0"
   }
 }
