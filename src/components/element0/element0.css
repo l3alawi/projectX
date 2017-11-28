@@ -1,0 +1,8 @@
+.text{
+  font-weight: 100 ;
+}
+.vl {
+  position: relative;
+    border-left: 1px solid green;
+    height: 500px;
+}

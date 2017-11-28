@@ -1,3 +1,4 @@
+
 .space{
   margin: 5px;
 }
@@ -50,7 +51,7 @@
   }
 
   .date{
-    font-size: 19px;
+    font-weight: 100;
   }
 
   .date0{
@@ -64,4 +65,8 @@
   .userInfo{
   margin-top: 20px;
   margin-left: 10px;
+}
+
+.text{
+  margin-right: 20px
 }

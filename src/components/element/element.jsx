@@ -18,9 +18,9 @@ export default class Element extends React.Component {
 
             <div className=" parent column is-6">
               <div>
-                <p className="date">{this.props.trajets.trajet.date.jour}
-                  <strong className="date0">{this.props.trajets.trajet.date.mois}</strong>
-                  à
+                <p className="date">{this.props.trajets.trajet.date.jour} &nbsp;
+                  <strong className="date0">{this.props.trajets.trajet.date.mois}</strong>&nbsp;
+                  à&nbsp;
                   <font size="7">{this.props.trajets.trajet.date.heure}</font>
                 </p>
               </div>
@@ -45,7 +45,7 @@ export default class Element extends React.Component {
                   <h1 className="childRight">
                     <i style={{color: 'hsl(171, 100%, 41%)'}} className="space fa fa-male" aria-hidden="true"></i>{this.props.trajets.user.age}, ans</h1>
                   <h1 className="childRight">
-                    <i style={{color: 'hsl(217, 71%, 53%)'}} className="space fa fa-facebook-square" aria-hidden="true"></i>{this.props.trajets.user.facebook_friends}
+                    <i style={{color: 'hsl(217, 71%, 53%)'}} className="space fa fa-facebook-square" aria-hidden="true"></i>{this.props.trajets.user.facebook_friends}&nbsp;
                     amis</h1>
                   <h1 className="childRight">
                     <i style={{color: 'hsl(48, 100%, 67%)'}} className="space fa fa-star" aria-hidden="true"></i>
@@ -56,11 +56,11 @@ export default class Element extends React.Component {
               <hr className="line"></hr>
               <div className="centerDiv">
                 <p className="space childLeft">
-                  <font size="8">{this.props.trajets.trajet.prix}</font>,00DH
+                  <font size="8">{this.props.trajets.trajet.prix}</font>,00DH &nbsp;
                   <strong>par place</strong>
                 </p>
                 <p className="space childLeft">
-                  <font size="6">{this.props.trajets.trajet.places_restantes}</font>
+                  <font size="6">{this.props.trajets.trajet.places_restantes}</font> &nbsp;
                   place restante parmis {this.props.trajets.trajet.places}</p>
               </div>
             </div>
