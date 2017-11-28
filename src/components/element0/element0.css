@@ -1,8 +1,82 @@
 .text{
   font-weight: 100 ;
+  font-size: 18px;
 }
 .vl {
   position: relative;
-    border-left: 1px solid green;
-    height: 500px;
+    border-left: 1px solid;
+    height: 60px;
+}
+
+.center{
+	  position: relative;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.centerImage{
+	  position: relative;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%, -100%);
+    z-index: 5;
+}
+
+.columns0{
+	height: 75px;
+}
+
+.photoName{
+ 	position: relative;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%, 20%);
+    z-index: 5;
+}
+
+.nameText{
+	font-size: 8px;
+	font-weight: 700;
+ 	display: inline-block;
+ 	text-align: center;
+ 	padding-top: 2px;
+ 	padding-bottom: 10px;
+}
+
+.textCenter{
+	text-align: center;
+}
+
+@media only screen and (max-width: 1370px) {
+    .text{
+  font-weight: 400 ;
+  font-size: 12px;
+}
+
+.nameText{
+	font-size: 8px;
+ 	display: inline-block;
+ 	text-align: center;
+}
+
+
+}
+
+@media only screen and (max-width: 760px){
+.centerImage{
+	  position: relative;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%, 0%);
+    z-index: 5;
+}
+.photoName{
+ 	position: relative;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%, 0%);
+    z-index: 5;
+}
 }
