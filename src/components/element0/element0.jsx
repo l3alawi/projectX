@@ -12,7 +12,6 @@ export default class Element0 extends React.Component {
   componentDidMount() {}
 
   render() {
-    console.log(window.innerWidth);
     return (<div>
       <a>
       <div className="card">
@@ -60,21 +59,21 @@ export default class Element0 extends React.Component {
 
       <hr></hr>
 
-       <div class="media">
-  <figure class="media-left">
-    <p class="image is-64x64">
+       <div className="media">
+  <figure className="media-left">
+    <p className="image is-64x64">
       <img src="https://bulma.io/images/placeholders/128x128.png" />
     </p>
     <p>Alaeddine Beljebbar</p>
   </figure>
-  <div class="media-content">
-    <div class="content">
+  <div className="media-content">
+    <div className="content">
       <p>
         <strong>Barbara Middleton</strong>
         <br />
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta eros lacus, nec ultricies elit blandit non. Suspendisse pellentesque mauris sit amet dolor blandit rutrum. Nunc in tempus turpis.
         <br />
-        <small><a>Like</a> · <a>Reply</a> · 3 hrs</small>
+        <small>· 3 hrs</small>
       </p>
     </div>
     </div>

@@ -5,3 +5,11 @@
 .marginButtom{
 	margin-bottom: 30px;
 }
+
+.canvas{
+	position: absolute;
+	left: 10%;
+	top: 5%;
+	z-index: 5;
+	margin: 0 auto;
+}
