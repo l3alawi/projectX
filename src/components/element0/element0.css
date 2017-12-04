@@ -19,13 +19,30 @@
 .centerImage{
 	  position: relative;
     left:50%;
-    top: 50%;
-    transform: translate(-50%, -100%);
+    top: 0%;
+    transform: translate(-50%, 0%);
     z-index: 5;
 }
 
+.centerImage0{
+	  position: relative;
+    left:50%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    z-index: 5;
+}
+
+.placeText{
+	font-size: 11px;
+}
+
+
 .columns0{
 	height: 75px;
+}
+
+.elementContainer{
+	padding-top: 10px;
 }
 
 .photoName{
@@ -44,6 +61,16 @@
  	padding-top: 2px;
  	padding-bottom: 10px;
 }
+
+.userText{
+	font-size: 10px;
+	font-weight: 400;
+ 	display: inline-block;
+ 	text-align: left;
+ 	padding-top: 2px;
+ 	padding-bottom: 10px;
+}
+
 
 .textCenter{
 	text-align: center;
@@ -65,18 +92,6 @@
 }
 
 @media only screen and (max-width: 760px){
-.centerImage{
-	  position: relative;
-    left:50%;
-    top: 50%;
-    transform: translate(-50%, 0%);
-    z-index: 5;
-}
-.photoName{
- 	position: relative;
-    left:50%;
-    top: 50%;
-    transform: translate(-50%, 0%);
-    z-index: 5;
-}
+
+
 }

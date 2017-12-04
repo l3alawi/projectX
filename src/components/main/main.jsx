@@ -19,7 +19,7 @@ export default class Main extends React.Component {
 	}
 
 	componentDidMount(){
-		console.log(this.fibonaci(1000,0,1,true));
+		//console.log(this.fibonaci(1000,0,1,true));
 		//this.drawRect(100,100,10,10);
 
 		/*this.drawRect(100,100,10,10);
@@ -80,6 +80,8 @@ export default class Main extends React.Component {
 			trajetsElement.push(<Element0 key={i} className="margin" trajets={trajetData.trajets[i]} />);
 		}
 		return trajetsElement;
+
+		//<canvas className="canvas" ref="myCanvas" width={this.width} height={this.height}></canvas>
 	}
 
 
@@ -87,14 +89,14 @@ export default class Main extends React.Component {
 		let trajetsElement = this.extractTrajetsData0(trajetData);
 		return(
 		<div>
-			<canvas className="canvas" ref="myCanvas" width={this.width} height={this.height}></canvas>
+			
 			<div className="columns">
 				<div className="column is-3">
 				<UserUI />
 				</div>
 				<div className="column is-7">
 				<div className="marginButtom">{trajetData.trajets.length} résultats</div>
-					<Element0  />
+					<Element0 trajet={trajetData.trajets[0]}  />
 				</div>
 				<div className="column is-2">
 
