@@ -12,7 +12,7 @@ export default class Element0 extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.props.trajets);
+
   }
 
   showDetail(){
@@ -49,6 +49,7 @@ export default class Element0 extends React.Component {
 
   showDetailComponent(){
     if(this.state.detail){
+      this.text = <div><i className="fa fa-arrow-up fa-lg space" aria-hidden="true"></i>Cest bon Merci</div>;
       return   <div className="animated bounceInDown">
                       <hr></hr>
                       <div className="columns is-mobile">
@@ -137,6 +138,7 @@ export default class Element0 extends React.Component {
                   </div>
                       </div>
     }else{
+      this.text = <div><i className="fa fa-arrow-down fa-lg space" aria-hidden="true"></i>Je veux plus de detail</div>
       return ""
     }
   }
@@ -147,7 +149,6 @@ export default class Element0 extends React.Component {
     return (<div className="margin animated bounceInDown">
 
       <div className="card">
-      <a onClick={(e)=>{this.showDetail()}}>
       <div className="columns is-mobile elementContainer">
         <div className="column is-4">
           <div className="text center textCenter">
@@ -197,12 +198,22 @@ export default class Element0 extends React.Component {
         </div>
 
           </div>
+          <div className="columns is-mobile is-gapless">
+          <div className="column is-1"></div>
+          <div className="column is-3">
+          <div>
+          <a className="button is-info is-outlined" onClick={(e)=>{this.showDetail()}}><span className="buttonText">{this.text}</span></a>
+          </div>
+          </div>
+          <div className="column is-4"></div>
+          <div className="column is-3">
+          <a className="button is-success is-outlined"><span className="buttonText">OK</span></a>
+          </div>
+          <div className="column is-1"></div>
+          </div>
+          
 
 
-
-
-
-      </a>
       {trajetDetail}
 
       </div>

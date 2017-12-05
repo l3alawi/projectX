@@ -37,6 +37,7 @@ export default class DatePickerSingle extends React.Component {
           onDateChange={date => this.setState({ date })} // PropTypes.func.isRequired
           focused={this.state.focused} // PropTypes.bool
           onFocusChange={({ focused }) => this.setState({ focused })} // PropTypes.func.isRequired
+          showDefaultInputIcon={true}
         />
       </div>
     )

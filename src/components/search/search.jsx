@@ -10,58 +10,76 @@ export default class Search extends React.Component{
 
   constructor(props){
     super();
-    this.state = {
-      dateChoix: true
-    }
+      this.depart = "";
+      this.arrivee = "";
   }
 
 
-  filtreParJour(){
-      this.setState({
-        dateChoix: true
-      })
+    hide(){
+      this.props.hide();
     }
 
-  filtreParPeriode(){
-      this.setState({
-        dateChoix: false
-      })
+    handleChange(e){
+
+      switch(e.target.name){
+        case "depart" : this.depart = e.target.value; break;
+        case "arrivee" : this.arrivee = e.target.value; break;
+      }
+      console.log(this.depart);
+      this.props.search(this.depart,this.arrivee);
     }
 
   render(){
-    var datePicker
-    if(this.state.dateChoix){
-      datePicker = <DatePickerSingle />
-    }else{
-      datePicker = <DatePickerPeriode />
-    }
 
     return(
-      <div>
-        <a class="delete"></a>
-      <div className="columns is-mobile">
-        <div className="column is-5 is-offset-1">
-          <input className="input is-info" type="text" placeholder="depart" />
-        </div>
-          <i className="fa fa-long-arrow-right arrow" aria-hidden="destination"></i>
-        <div className="column is-5">
-          <input className="input is-info" type="text" placeholder="To" />
-        </div>
-      </div>
-      <div className="columns is-mobile is-gapless">
-        <div className="column">
-          <div className="select">
-            <select>
-              <option onClick={(e)=>this.filtreParJour()}>Filtrer par jour</option>
-              <option onClick={(e)=>this.filtreParPeriode()}>Filtrer par periode</option>
-            </select>
+      <div className="margin animated bounceInDown" style={{zIndex:5}} >
+
+      <div className="card">
+      <a class="delete" onClick={(e)=>this.hide()}></a>
+      <div className="columns is-mobile elementContainer">
+        <div className="column is-4">
+          <div className="text center textCenter">
+          <div className="control has-icons-left has-icons-right"><input className="input" type="text" name="depart" placeholder="ville de depart" onChange={(e)=>this.handleChange(e)} />
+          <span className="icon is-small is-left">
+          <i className="fa fa-circle-thin space debut" aria-hidden="true"></i>
+        </span>
+          </div>
+          <p><i className="fa fa-arrow-down fa-lg space" aria-hidden="true"></i></p>
+          <div className="control has-icons-left has-icons-right"><input className="input" type="text" name="arrivee" placeholder="ville d'arrivée" onChange={(e)=>this.handleChange(e)}  />
+          <span className="icon is-small is-left">
+          <i className="fa fa-circle-thin space arrivee" aria-hidden="true"></i>
+        </span>
+          </div>
           </div>
         </div>
-        <div className="column is-8">
-          {datePicker}
+
+
+        <div className="column is-6">
+        <div className="vl">
+          <div className="field">
+          <DatePickerPeriode />
+          </div>
+          <div className="control has-icons-left has-icons-right field time"><input className="input" type="time" name="name" placeholder="heure de depart"  />
+          <span className="icon is-small is-left">
+          <i className="fa fa-clock-o space" aria-hidden="true"></i>
+        </span>
+          </div>
+
         </div>
-      </div>
-      </div>
+        </div>
+
+        <div className="column is-2">
+        <div className="vl center">
+          <div className="text center textCenter">
+           <font size="5"><input className="input" type="text" name="name" placeholder="prix" /></font>
+          </div>
+        </div>
+        </div>
+
+          </div>
+
+    </div>
+    </div>
     )
   }
 }

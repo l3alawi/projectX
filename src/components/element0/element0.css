@@ -7,6 +7,15 @@
   font-weight: 100 ;
   font-size: 15px;
 }
+.showdetail{
+  width: 20%;
+}
+
+.buttonText{
+  font-weight: 100;
+  font-size: 12px;
+  text-align: left;
+}
 .vl {
   position: relative;
     border-left: 1px solid;

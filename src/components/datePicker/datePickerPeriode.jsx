@@ -5,7 +5,7 @@ import {DateRangePicker} from 'react-dates';
 import "react-dates/lib/css/_datepicker.css";
 
 var SelectedStartDate = moment();
-var SelectedEndDate = moment();
+var SelectedEndDate = moment().add(5, 'day');
 
 export default class DatePickerSingle extends React.Component {
 
@@ -24,6 +24,7 @@ export default class DatePickerSingle extends React.Component {
   onDatesChange({ startDate, endDate }) {
 
     this.setState({ startDate, endDate });
+    console.log(startDate);
   }
 
   onFocusChange(focusedInput) {
