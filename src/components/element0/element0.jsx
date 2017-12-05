@@ -7,12 +7,12 @@ export default class Element0 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      detail:true
+      detail:false
     }
   }
 
   componentDidMount() {
-    console.log(this.props.trajet);
+    console.log(this.props.trajets);
   }
 
   showDetail(){
@@ -24,24 +24,41 @@ export default class Element0 extends React.Component {
       this.setState({
       detail: true
     })
-    }
-    
+  }
   }
 
-  render() {
-    let trajetDetail; 
+  showSomeText(el,st){
+    if(el == ""){
+      return st
+    }else{
+      return el
+    }
+  }
 
+  showPlaceRestantes(){
+    if(this.props.trajets.trajet.places_restantes == 0){
+      return "Plein"
+    }else{
+      return this.props.trajets.trajet.places_restantes + "/" + this.props.trajets.trajet.places
+    }
+  }
+
+  detailComponentAnimation(){
+
+  }
+
+  showDetailComponent(){
     if(this.state.detail){
-      trajetDetail = <div>
+      return   <div className="animated bounceInDown">
                       <hr></hr>
                       <div className="columns is-mobile">
                       <div className="column is-4">
                       <p className="placeText">
-                       <i className="fa fa-circle-thin space debut" aria-hidden="true"></i>point de depart : contacter conducteur
+                       <i className="fa fa-circle-thin space debut" aria-hidden="true"></i>point de depart : {this.showSomeText(this.props.trajets.trajet.from.place, "contacter le conducteur")}
                        </p>
-                       
+
                        <p className="placeText">
-                       <i className="fa fa-circle-thin space arrivee" aria-hidden="true"></i>point d'arrivée : contacter conducteur
+                       <i className="fa fa-circle-thin space arrivee" aria-hidden="true"></i>point d'arrivée : {this.showSomeText(this.props.trajets.trajet.to.place, "contacter le conducteur")}
                        </p>
                        <p className="placeText">
                        <i className="fa fa-arrows-h space" aria-hidden="true"></i>durée du trajet : 3h : 30
@@ -49,10 +66,10 @@ export default class Element0 extends React.Component {
                       </div>
                       <div className="column is-3">
                       <div className="content">
-                        <p>
+                        <p className="placeText">
                           <strong>Description</strong>
                           <br />
-                         bla bla bla
+                         {this.showSomeText(this.props.trajets.trajet.description, "on doit ajouter une description")}
                           <br />
                         </p>
                       </div>
@@ -88,37 +105,64 @@ export default class Element0 extends React.Component {
                         Alaeddine Beljebbar</p>
                         </div>
                         <div className="column is-1">
-                        <p>
-                        Plein</p>
+                        <p className="placeText4">
+                        {this.showPlaceRestantes()}</p>
                         </div>
                         </div>
+
+                        <div class="box">
+                    <article class="media">
+                      <div class="media-left">
+                        <figure class="image is-64x64">
+                          <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image"  />
+                        </figure>
+                      </div>
+                      <div class="media-content">
+                        <div className="content">
+                          <p>
+                            <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+                            <br />
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+                          </p>
+                        </div>
+                        <nav className="level is-mobile">
+                          <div className="level-left">
+                            <a className="level-item">
+                              <span className="icon is-small"><i className="fa fa-heart"></i></span>
+                            </a>
+                          </div>
+                        </nav>
+                      </div>
+                    </article>
+                  </div>
                       </div>
     }else{
-      trajetDetail = ""
+      return ""
     }
+  }
 
+  render() {
+    let trajetDetail = this.showDetailComponent();
 
+    return (<div className="margin animated bounceInDown">
 
-
-    return (<div>
-      
       <div className="card">
       <a onClick={(e)=>{this.showDetail()}}>
       <div className="columns is-mobile elementContainer">
         <div className="column is-4">
           <div className="text center textCenter">
-          <i className="fa fa-circle-thin space debut" aria-hidden="true"></i>Rabat
+          <i className="fa fa-circle-thin space debut" aria-hidden="true"></i>{this.props.trajets.trajet.from.city}
           <i className="fa fa-long-arrow-right fa-lg space" aria-hidden="true"></i>
-          <i className="fa fa-circle-thin space arrivee" aria-hidden="true"></i>Marrakech
+          <i className="fa fa-circle-thin space arrivee" aria-hidden="true"></i>{this.props.trajets.trajet.to.city}
           </div>
         </div>
-        
+
 
         <div className="column is-3">
         <div className="vl center">
-          <div className="text center">
-          <i className="fa fa-calendar-o space" aria-hidden="true"></i> Mardi 28 november 2017
-          <p><i className="fa fa-clock-o space" aria-hidden="true"></i> 17:00</p>
+          <div className="dateText center">
+          <i className="fa fa-calendar-o space" aria-hidden="true"></i> {this.props.trajets.trajet.date.jour} {this.props.trajets.trajet.date.mois}
+          <p><i className="fa fa-clock-o space" aria-hidden="true"></i> {this.props.trajets.trajet.date.heure} </p>
           </div>
         </div>
         </div>
@@ -126,7 +170,7 @@ export default class Element0 extends React.Component {
         <div className="column is-2">
         <div className="vl center">
           <div className="text center textCenter">
-           <font size="5">70 DH</font>
+           <font size="5">{this.props.trajets.trajet.prix} DH </font>
           </div>
         </div>
         </div>
@@ -141,27 +185,28 @@ export default class Element0 extends React.Component {
 
         </div>
         <div className="column is-2">
-        <p className="text center userText">
-          <div>Alaeddine Beljebbar</div>
-          <div><i className="fa fa-male space" aria-hidden="true"></i>homme, 24
-          </div>
-          <div><i className="fa fa-facebook-square space" aria-hidden="true"></i>333 amis
-          </div>
-          <div><i className="fa fa-star-o space" aria-hidden="true"></i>4/5
-          </div>
+        <div className="dateText center userText">
+          <p>{this.props.trajets.user.name} </p>
+          <p><i className="fa fa-male space" aria-hidden="true"></i>{this.props.trajets.user.gender}, {this.props.trajets.user.age}
+          </p>
+          <p><i className="fa fa-facebook-square space" aria-hidden="true"></i>{this.props.trajets.user.facebook_friends} amis
+          </p>
+          <p><i className="fa fa-star-o space" aria-hidden="true"></i>{this.props.trajets.user.avis}/5
           </p>
         </div>
-          
+        </div>
+
           </div>
 
-      
 
 
-      
+
+
       </a>
       {trajetDetail}
+
       </div>
-      
+
     </div>)
   }
 }

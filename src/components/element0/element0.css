@@ -2,6 +2,11 @@
   font-weight: 100 ;
   font-size: 18px;
 }
+
+.dateText{
+  font-weight: 100 ;
+  font-size: 15px;
+}
 .vl {
   position: relative;
     border-left: 1px solid;
@@ -34,6 +39,12 @@
 
 .placeText{
 	font-size: 11px;
+  font-weight: 400 ;
+}
+
+.placeText4{
+	font-size: 15px;
+  font-weight: 100 ;
 }
 
 
@@ -48,8 +59,8 @@
 .photoName{
  	position: relative;
     left:50%;
-    top: 50%;
-    transform: translate(-50%, 20%);
+    top: 0%;
+    transform: translate(-50%, 10%);
     z-index: 5;
 }
 
@@ -76,6 +87,10 @@
 	text-align: center;
 }
 
+
+
+
+
 @media only screen and (max-width: 1370px) {
     .text{
   font-weight: 400 ;
@@ -83,10 +98,15 @@
 }
 
 .nameText{
-	font-size: 8px;
- 	display: inline-block;
- 	text-align: center;
+  font-size: 5px;
+  font-weight: 700;
+  display: inline-block;
+  text-align: center;
+  padding-top: 2px;
+  padding-bottom: 10px;
 }
+
+
 
 
 }
